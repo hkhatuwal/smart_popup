@@ -69,10 +69,7 @@ class _MyAppState extends State<MyApp> {
                     ),
                     ),
                   ),
-
-                  
-
-                ], totalHeight: 40,totalWidth: 130);
+                ], totalHeight: 50,totalWidth: 130);
               },
               child: ElevatedButton(
                 onPressed: null,

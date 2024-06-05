@@ -47,7 +47,6 @@ class _SmartPopupDialogState extends State<SmartPopupDialog> {
             Expanded(
                 child: InkWell(
                     onTap: () => Navigator.pop(context),
-
                     child: Container(
               color: Colors.black.withOpacity(.1),
             ))),
