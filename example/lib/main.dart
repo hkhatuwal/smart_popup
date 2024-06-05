@@ -35,41 +35,56 @@ class _MyAppState extends State<MyApp> {
                 SmartPopup.show(context, position: details.globalPosition, items: [
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 2.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: Colors.orangeAccent,
-                          borderRadius: BorderRadius.circular(100)
-                      ),child: const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Icon(Icons.cabin),
-                    ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 2.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: Colors.orangeAccent,
-                          borderRadius: BorderRadius.circular(100)
-                      ),child: const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Icon(Icons.cabin),
-                    ),
+                    child: Column(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                              color: Colors.orangeAccent,
+                              borderRadius: BorderRadius.circular(100)
+                          ),child: const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Icon(Icons.cabin),
+                        ),
+                        ),
+                        Text("Himanshu")
+                      ],
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 2.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: Colors.orangeAccent,
-                          borderRadius: BorderRadius.circular(100)
-                      ),child: const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Icon(Icons.cabin),
-                    ),
+                    child: Column(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                              color: Colors.orangeAccent,
+                              borderRadius: BorderRadius.circular(100)
+                          ),child: const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Icon(Icons.cabin),
+                        ),
+                        ),
+                        Text("Himanshu")
+                      ],
                     ),
                   ),
-                ], totalHeight: 50,totalWidth: 130);
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 2.0),
+                    child: Column(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                              color: Colors.orangeAccent,
+                              borderRadius: BorderRadius.circular(100)
+                          ),child: const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Icon(Icons.cabin),
+                        ),
+                        ),
+                        Text("Himanshu")
+                      ],
+                    ),
+                  ),
+                ], totalHeight: 70,totalWidth: 130);
               },
               child: ElevatedButton(
                 onPressed: null,
