@@ -32,7 +32,9 @@ class _MyAppState extends State<MyApp> {
           child: Builder(builder: (context) {
             return GestureDetector(
               onTapDown: (details) {
-                SmartPopup.show(context, position: details.globalPosition, items: [
+                SmartPopup.show(context, position: details.globalPosition,animationDuration:
+                const Duration(milliseconds: 400),
+                    items: [
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 2.0),
                     child: Column(
@@ -84,9 +86,10 @@ class _MyAppState extends State<MyApp> {
                       ],
                     ),
                   ),
-                ], totalHeight: 70,totalWidth: 130);
+
+                ], totalHeight: 70,totalWidth: 300);
               },
-              child: ElevatedButton(
+              child: const ElevatedButton(
                 onPressed: null,
                 child: Text("Press me"),
               ),

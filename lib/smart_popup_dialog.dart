@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smart_popup/src/animated_items.dart';
 
@@ -5,12 +6,20 @@ class SmartPopupDialog extends StatefulWidget {
   final double x, y;
   final List<Widget> items;
   final double totalHeight, totalWidth;
+  final BoxDecoration? decoration;
+  final EdgeInsets? padding;
+  final BorderRadius? borderRadius;
+  final Duration? animationDuration;
 
   const SmartPopupDialog(
       {super.key,
       required this.x,
       required this.y,
+      this.padding,
       required this.items,
+      this.borderRadius,
+      this.decoration,
+      this.animationDuration,
       required this.totalHeight,
       required this.totalWidth});
 
@@ -44,17 +53,26 @@ class _SmartPopupDialogState extends State<SmartPopupDialog> {
         color: Colors.transparent,
         child: Stack(
           children: [
-            Expanded(
+            Positioned.fill(
                 child: InkWell(
                     onTap: () => Navigator.pop(context),
                     child: Container(
-              color: Colors.black.withOpacity(.1),
-            ))),
+                      color: Colors.black.withOpacity(.1),
+                    ))),
             Positioned(
               top: getYAxis(),
               left: getXAxis(),
-              child: AnimatedItems(widget.items,
-                  totalHeight: widget.totalHeight, totalWidth: widget.totalWidth),
+              child: Container(
+                padding: widget.padding ?? const EdgeInsets.all(10),
+                decoration: widget.decoration ??
+                    BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(100)),
+                child: ClipRRect(
+                  borderRadius: widget.borderRadius ?? BorderRadius.circular(100),
+                  child: AnimatedItems(widget.items,
+                      totalHeight: widget.totalHeight, totalWidth: widget.totalWidth,
+                    animationDuration: widget.animationDuration,),
+                ),
+              ),
             ),
           ],
         ),

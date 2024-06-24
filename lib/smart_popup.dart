@@ -11,6 +11,10 @@ class SmartPopup {
       {required Offset position,
       required List<Widget> items,
       required double totalHeight,
+        BoxDecoration? decoration,
+        EdgeInsets? padding,
+        BorderRadius? borderRadius,
+        Duration? animationDuration,
       required double totalWidth}) {
     assert(items.isNotEmpty);
     Navigator.push(
@@ -20,6 +24,10 @@ class SmartPopup {
           y: position.dy,
           items: items,
           totalWidth: totalWidth,
+          borderRadius: borderRadius,
+          decoration: decoration,
+          animationDuration:animationDuration??Duration(milliseconds: 400),
+          padding: padding,
           totalHeight: totalHeight,
         )));
   }
